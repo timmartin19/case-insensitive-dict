@@ -1,17 +1,23 @@
-# Config file for automatic testing at travis-ci.org
-# This file will be regenerated if you run travis_pypi_setup.py
-
-language: python
-python:
-  - 3.5
-  - 3.4
-  - 2.7
-  - pypy
-
-# command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
+deploy:
+  distributions: sdist bdist_wheel
+  'on': {repo: timmartin19/case-insensitive-dict, tags: true}
+  password:
+    secure: !!binary |
+      dzRFQzk1MFhqdFZwWUorOGQ3YitQS0xOQm00OUQxeVppRWtyYzlBcWR1bWovZDR6KzBxNXhTWnlM
+      dzBWUTZ0MG8vbHloOGY2dGo0VWVZQUprRzdVZnBkb3VoMUh2QW9OSGRWT0p0eUxteEhHTXBrYnBU
+      TUdqR3NLazlVL2hyeVRXYU9UYmNnVUgwaUpVWmtTV0xCYkNiT3REWWlBUmJoalFWY2pKNzZGKy9T
+      NlB2TEpUU1MrQVRXS3cvN05OdVJNbzVVOXlGeDRNYUVsSFNBb0NBUCtkMXM3T3Z0bklwOTBab2VF
+      dVdCclBMM0JTNytmMWNvNEhiWnlwb20wd21EeXo3dTY4WUIrdkgyNUlVQmJ1cUUzSVpIbXp3a0VD
+      Ymd0Mm56SW45aXhNaTVEVUtEaHIvRGpsTk1MZzlWU3pJKzcxQlZHamFUUmNVZ1RwbEV2dmZTYVZh
+      a0VYdklCZG4vSnNMK3g0Y2U4RkVFKzF4azF2S0E1VFVGQ3NqOXBwYm9RZTNLUmRqN2UzK1JSL0Js
+      MDlUSjErTXVFamdROTJFWkMrSjFLVVc3ZThXeUNESjh2NHRmUGVWTnpuSWk0WXVzNzF3YVdkRXk3
+      UHhYYkt6Ylc1Sk1xQ2lxYThpclJHUWFhekxQWjBWRWRUdkxkdUhwdktHWFhvcEVQaE5DSlJQY01z
+      a3M3eXV3TStXV0QralNuYUlvNkZYQkVCNGViOFFlUEN4K0duUDFKdkZNSUpGQ2RoNDEydElDUUZQ
+      d1BESU1ieDJad1RFVThydzV0VGQwb2VucXo3R2tHWEx3OWFqRVBZRTFTRmI4MXoxbzhibXdUbDBr
+      aFdaQzdsZjFNb0E4YjBvckgxdWVncjZCSFArYmV5STB2QjFVU1pQM28rczVpbWJqZmh6dU1lNkE9
+  provider: pypi
+  user: timmartin19
 install: pip install -U tox
-
-# command to run tests, e.g. python setup.py test
+language: python
+python: [3.5, 3.4, 2.7, pypy]
 script: python -m unittest discover
-
-
