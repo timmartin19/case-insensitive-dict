@@ -17,7 +17,7 @@ deploy:
       aFdaQzdsZjFNb0E4YjBvckgxdWVncjZCSFArYmV5STB2QjFVU1pQM28rczVpbWJqZmh6dU1lNkE9
   provider: pypi
   user: timmartin19
-install: pip install -U tox
+install: pip install -e .
 language: python
-python: [3.5, 3.4, 2.7, pypy]
+python: [3.5, 3.4, 3.3, 2.7, 2.6, pypy]
 script: python -m unittest discover

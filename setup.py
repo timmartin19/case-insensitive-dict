@@ -14,7 +14,7 @@ requirements = [
 ]
 
 test_requirements = [
-    # TODO: put package test requirements here
+    'unittest2'
 ]
 
 setup(
@@ -25,11 +25,7 @@ setup(
     author="Tim Martin",
     author_email='tim@timmartin.me',
     url='https://github.com/timmmartin19/case_insensitive_dict',
-    packages=[
-        'case_insensitive_dict',
-    ],
-    package_dir={'case_insensitive_dict':
-                 'case_insensitive_dict'},
+    py_modules=['case_insensitive_dict'],
     include_package_data=True,
     install_requires=requirements,
     license="MIT license",
