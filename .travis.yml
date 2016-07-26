@@ -1,23 +1,21 @@
 deploy:
   distributions: sdist bdist_wheel
-  'on': {repo: timmartin19/case-insensitive-dict, tags: true}
+  on:
+    repo: timmartin19/case-insensitive-dict
+    tags: true
   password:
-    secure: !!binary |
-      dzRFQzk1MFhqdFZwWUorOGQ3YitQS0xOQm00OUQxeVppRWtyYzlBcWR1bWovZDR6KzBxNXhTWnlM
-      dzBWUTZ0MG8vbHloOGY2dGo0VWVZQUprRzdVZnBkb3VoMUh2QW9OSGRWT0p0eUxteEhHTXBrYnBU
-      TUdqR3NLazlVL2hyeVRXYU9UYmNnVUgwaUpVWmtTV0xCYkNiT3REWWlBUmJoalFWY2pKNzZGKy9T
-      NlB2TEpUU1MrQVRXS3cvN05OdVJNbzVVOXlGeDRNYUVsSFNBb0NBUCtkMXM3T3Z0bklwOTBab2VF
-      dVdCclBMM0JTNytmMWNvNEhiWnlwb20wd21EeXo3dTY4WUIrdkgyNUlVQmJ1cUUzSVpIbXp3a0VD
-      Ymd0Mm56SW45aXhNaTVEVUtEaHIvRGpsTk1MZzlWU3pJKzcxQlZHamFUUmNVZ1RwbEV2dmZTYVZh
-      a0VYdklCZG4vSnNMK3g0Y2U4RkVFKzF4azF2S0E1VFVGQ3NqOXBwYm9RZTNLUmRqN2UzK1JSL0Js
-      MDlUSjErTXVFamdROTJFWkMrSjFLVVc3ZThXeUNESjh2NHRmUGVWTnpuSWk0WXVzNzF3YVdkRXk3
-      UHhYYkt6Ylc1Sk1xQ2lxYThpclJHUWFhekxQWjBWRWRUdkxkdUhwdktHWFhvcEVQaE5DSlJQY01z
-      a3M3eXV3TStXV0QralNuYUlvNkZYQkVCNGViOFFlUEN4K0duUDFKdkZNSUpGQ2RoNDEydElDUUZQ
-      d1BESU1ieDJad1RFVThydzV0VGQwb2VucXo3R2tHWEx3OWFqRVBZRTFTRmI4MXoxbzhibXdUbDBr
-      aFdaQzdsZjFNb0E4YjBvckgxdWVncjZCSFArYmV5STB2QjFVU1pQM28rczVpbWJqZmh6dU1lNkE9
+    secure: b3+kuLCh7yi/SpAvYJBHHWI2aho8ufpKEu96oZMlb2URa5Jn4DyeJemfBcOIZjSBV+GXJpnFCFiiDsA7kG2Ry8/9ChX+CPV0nT80g0MD+CK8RGjKNY6SoGcCd3QtELkg/3NlW863tAIcDY7Coi4wzhotQt0ulQGiX5UPj7IiTSH438WlWm9vSKDY9RZZzCt3md5N/o236qntgwZmAIwL2kNXwak1Kiuj97nhJK//96QGl4bZDqnqQU9y/kwoUClNfo7/2UhSlODdJ/WWYcbIZ5psLshAbvE2dLdnwTCyTOFe7M+zEbSBWxviv8KpzXfxFEH1HlKpviilANcRzCc/PQfqQ1eHwLdOqsM6U3+sv9E4l2y9pmDfZo8DRDTbD0D8UtHE0eVBAm/q0WRQ2LX929FXYKr9DGWPOyg+hBgw05jhld3810nFoEuUBanS1Xkw5rXSC1QjDFLCYsln5DAjSv6bQMyttFRAR2gza4wJCOPeOQ51/EwGzZrqsjtvMTY0wmR5HUitun9oZMI54/i6LLgeggmsfRFyTVWORQZeZqBCI8TN7WToe7D49mZjGA/CMZHrwi33sgtCRM+gBvRX70ADITHosUuq+uiuflhMjE4BmdJaliujIZuOcrtB4knFsRgnL2PPcXc2qx6ngtsyaiO3nnkhEgAGhrHgHb//aXk=
   provider: pypi
   user: timmartin19
-install: pip install -e .
+install:
+  - pip install -e .
+  - pip install unittest2
 language: python
-python: [3.5, 3.4, 3.3, 2.7, 2.6, pypy]
+python:
+- 3.5
+- 3.4
+- 3.3
+- 2.7
+- 2.6
+- pypy
 script: python -m unittest discover
