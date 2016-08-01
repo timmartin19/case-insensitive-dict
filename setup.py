@@ -18,14 +18,14 @@ test_requirements = [
 ]
 
 setup(
-    name='case_insensitive_dict',
+    name='insensitive-dict',
     version='0.1.4',
     description="A case insensitive dictionary that's fully tested.  Primarily broken out from the requests package",
     long_description=readme + '\n\n' + history,
     author="Tim Martin",
     author_email='tim@timmartin.me',
     url='https://github.com/timmmartin19/case_insensitive_dict',
-    py_modules=['case_insensitive_dict'],
+    py_modules=['insensitive_dict'],
     include_package_data=True,
     install_requires=requirements,
     license="MIT license",
@@ -44,6 +44,6 @@ setup(
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
     ],
-    test_suite='case_insensitive_dict_tests',
+    test_suite='insensitive_dict_tests',
     tests_require=test_requirements
 )

@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 
 import unittest2
 
-from case_insensitive_dict import CaseInsensitiveDict
+from insensitive_dict import CaseInsensitiveDict
 
 
 def assert_dicts_equal(expected, actual):
