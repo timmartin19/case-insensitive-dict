@@ -6,7 +6,7 @@ import collections
 
 __author__ = 'Tim Martin'
 __email__ = 'tim@timmartin.me'
-__version__ = '0.1.5'
+__version__ = '0.1.6'
 
 
 class CaseInsensitiveDict(collections.MutableMapping):
