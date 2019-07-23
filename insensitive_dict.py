@@ -6,7 +6,7 @@ from collections import Mapping, MutableMapping, OrderedDict
 
 __author__ = 'Tim Martin'
 __email__ = 'tim@timmartin.me'
-__version__ = '0.1.9'
+__version__ = '0.1.10'
 
 
 class CaseInsensitiveDict(MutableMapping):
