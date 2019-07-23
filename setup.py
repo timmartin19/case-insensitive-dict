@@ -19,7 +19,7 @@ test_requirements = [
 
 setup(
     name='insensitive-dict',
-    version='0.1.8',
+    version='0.1.9',
     description="A case insensitive dictionary that's fully tested.  Primarily broken out from the requests package",
     long_description=readme + '\n\n' + history,
     author="Tim Martin",
