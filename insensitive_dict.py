@@ -2,14 +2,14 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-import collections
+from collections import Mapping, MutableMapping, OrderedDict
 
 __author__ = 'Tim Martin'
 __email__ = 'tim@timmartin.me'
 __version__ = '0.1.5'
 
 
-class CaseInsensitiveDict(collections.MutableMapping):
+class CaseInsensitiveDict(MutableMapping):
     """A case-insensitive ``dict``-like object.
     Implements all methods and operations of
     ``collections.MutableMapping`` as well as dict's ``copy``. Also
@@ -32,7 +32,7 @@ class CaseInsensitiveDict(collections.MutableMapping):
     """
 
     def __init__(self, data=None, **kwargs):
-        self._store = collections.OrderedDict()
+        self._store = OrderedDict()
         if data is None:
             data = {}
         self.update(data, **kwargs)
@@ -63,7 +63,7 @@ class CaseInsensitiveDict(collections.MutableMapping):
         )
 
     def __eq__(self, other):
-        if isinstance(other, collections.Mapping):
+        if isinstance(other, Mapping):
             other = CaseInsensitiveDict(other)
         else:
             raise ValueError("CaseInsentiveDict and {0} are not comparable".format(type(other)))
