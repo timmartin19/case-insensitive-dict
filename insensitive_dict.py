@@ -7,7 +7,7 @@ from collections.abc import Mapping, MutableMapping
 
 __author__ = 'Tim Martin'
 __email__ = 'tim@timmartin.me'
-__version__ = '0.1.10'
+__version__ = '1.0.0'
 
 
 class CaseInsensitiveDict(MutableMapping):
