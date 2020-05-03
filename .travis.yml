@@ -3,7 +3,7 @@ deploy:
   on:
     repo: timmartin19/case-insensitive-dict
     tags: true
-    python: '3.7'
+    python: '3.8'
   password:
     secure: b3+kuLCh7yi/SpAvYJBHHWI2aho8ufpKEu96oZMlb2URa5Jn4DyeJemfBcOIZjSBV+GXJpnFCFiiDsA7kG2Ry8/9ChX+CPV0nT80g0MD+CK8RGjKNY6SoGcCd3QtELkg/3NlW863tAIcDY7Coi4wzhotQt0ulQGiX5UPj7IiTSH438WlWm9vSKDY9RZZzCt3md5N/o236qntgwZmAIwL2kNXwak1Kiuj97nhJK//96QGl4bZDqnqQU9y/kwoUClNfo7/2UhSlODdJ/WWYcbIZ5psLshAbvE2dLdnwTCyTOFe7M+zEbSBWxviv8KpzXfxFEH1HlKpviilANcRzCc/PQfqQ1eHwLdOqsM6U3+sv9E4l2y9pmDfZo8DRDTbD0D8UtHE0eVBAm/q0WRQ2LX929FXYKr9DGWPOyg+hBgw05jhld3810nFoEuUBanS1Xkw5rXSC1QjDFLCYsln5DAjSv6bQMyttFRAR2gza4wJCOPeOQ51/EwGzZrqsjtvMTY0wmR5HUitun9oZMI54/i6LLgeggmsfRFyTVWORQZeZqBCI8TN7WToe7D49mZjGA/CMZHrwi33sgtCRM+gBvRX70ADITHosUuq+uiuflhMjE4BmdJaliujIZuOcrtB4knFsRgnL2PPcXc2qx6ngtsyaiO3nnkhEgAGhrHgHb//aXk=
   provider: pypi
@@ -15,10 +15,8 @@ install:
   - pip install unittest2
 language: python
 python:
+- 3.8
 - 3.7
 - 3.6
 - 3.5
-- 3.4
-- 2.7
-- pypy
-script: python -m unittest discover
+script: pytest insensitive_dict_tests
